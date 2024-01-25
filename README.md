@@ -1,10 +1,6 @@
 Project for the course Algoritmi e Principi dell'Informatica (API) @ Politecnico di Milano 
 A.A. 2021-2022 
 
-# README
-
-## Educational Objectives and Implementation
-
 ### Objectives
 - Practical application of the techniques learned in the module of algorithms and data structures of the course on algorithms and principles of computer science.
 - Implementation of a solution to a problem, focusing on concrete aspects of code efficiency.
@@ -14,13 +10,8 @@ A.A. 2021-2022
 - No external libraries beyond the standard C library.
 - No multithreading.
 - Input data received via stdin; results to be output via stdout.
-
-### Implementation Mode
 - The project is strictly individual.
 - Do not use any code fragments from others.
-- You are responsible for your own code; do not upload it to public repositories.
-- Do not share it with colleagues for "inspiration" or use any found code fragments.
-- In case of plagiarism or use of someone else's code, all involved projects will be canceled.
 
 ### Evaluation Criteria
 - The correctness and efficiency of the proposed solution are evaluated with automated test batteries.
@@ -57,11 +48,36 @@ Requires adding a graph to those considered for ranking. It is followed by the a
 The nodes of the graph are logically labeled with an integer index from 0 to d-1; the node at position 0 is the one whose outgoing star is described by the first line of the matrix.
 The weights of the graph's edge elements are integers in the range [0, 2^32 – 1].
 
-Example for d=3:
+#### TopK
+Prints the ranking between the graphs according to the number "k" of graphs to be stored for the ranking
+
+
+Input example:
 
 ```
+3,2
 AddGraph
-3,7,42
-0,7,2
-7,4,3
+0,4,3
+0,2,0
+2,0,0
+AddGraph
+0,0,2
+7,0,4
+0,1,0
+AddGraph
+3,1,8
+0,0,5
+0,9,0
+TopK
 ```
+
+Possible outputs:
+```
+0 1
+```
+or
+```
+1 0
+```
+
+
